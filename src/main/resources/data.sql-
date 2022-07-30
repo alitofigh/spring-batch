@@ -1,0 +1,3 @@
+--SELECT * FROM CSVREAD('classpath:/data/title_akas.tsv', null, 'rowSeparator=' || CHAR(9));
+insert into title_akas (n_const,primary_Name,birth_Year,death_Year,primary_Profession,known_For_Titles)
+               values (SELECT * FROM CSVREAD('classpath:/data/tdata.tsv', null, 'fieldSeparator=|'));
